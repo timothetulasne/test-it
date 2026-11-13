@@ -48,7 +48,7 @@ public class BookServiceTest {
         Book result = bookService.borrowBook(1L, 60L);
 
         //then
-        assertTrue(result.getStatus()==Status.EMPRUNTE,"Livre emprunté");       
-        
+        assertTrue(result.getStatus()==Status.EMPRUNTE,"Status verifié");       
+        assertTrue(result.getBorrower().getId()==60L,"Emprunteur enregistré");
     }
 }
